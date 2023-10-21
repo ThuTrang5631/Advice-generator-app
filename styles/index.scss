@@ -1,0 +1,106 @@
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+$light-cyan: hsl(193, 38%, 86%);
+$neon-green: hsl(150, 100%, 66%);
+$color1: #323a49;
+$color2: #19181a;
+
+body {
+  min-height: 100vh;
+  background-color: $color2;
+}
+
+.quotebox {
+  width: 50%;
+  padding: 40px;
+  background-color: $color1;
+  border-radius: 20px;
+
+  .quotebox__title {
+    font-size: 25px;
+    color: $neon-green;
+    font-family: "Manrope", sans-serif;
+    letter-spacing: 5px;
+    font-weight: 800;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .quotebox__advice {
+    font-size: 28px;
+    color: $light-cyan;
+    text-align: center;
+  }
+
+  .quotebox__icon {
+    color: $light-cyan;
+    font-size: 15px;
+  }
+
+  .quotebox__wrapadvice {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .quotebox__btnnewquote {
+    background-color: $neon-green;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    position: absolute;
+    border: none;
+
+    &:hover {
+      box-shadow: 0 0 40px $neon-green;
+    }
+  }
+
+  .quotebox__twitter {
+    color: $neon-green;
+    margin-bottom: 10px;
+  }
+
+  .quotebox__content {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .quotebox {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .quotebox {
+    width: 85%;
+  }
+}
